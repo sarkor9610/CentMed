@@ -25,7 +25,7 @@ class Wizyty(models.Model):
     id_lekarze = models.ForeignKey(Lekarze,on_delete=models.CASCADE)
     id_pacjenta = models.ForeignKey(Pacjenci,on_delete=models.CASCADE)
     data_wizyty = models.DateField()
-    godzina_wizyty = models.DateField()
+    godzina_wizyty = models.TimeField()
     Opis = models.CharField(max_length=20)
     numer_recepty = models.IntegerField(max_length=20)
     numer_skierowania = models.IntegerField(max_length=20)
